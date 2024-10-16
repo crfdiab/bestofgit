@@ -8,6 +8,8 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { formatDate } from "@/lib/utils";
 import Image from "next/image";
 
+const canonical = (slug: string) => `/blog/${slug}`;
+
 type PageProps = {
   params: { slug: string };
 };
@@ -19,6 +21,9 @@ export async function generateMetadata({ params: { slug } }: PageProps) {
   return {
     title: frontmatter.title,
     description: frontmatter.description,
+    alternates: {
+      canonical: canonical(slug),
+    },
   };
 }
 

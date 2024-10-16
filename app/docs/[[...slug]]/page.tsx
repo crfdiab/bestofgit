@@ -6,6 +6,8 @@ import { notFound } from "next/navigation";
 import { getDocsForSlug } from "@/lib/markdown";
 import { Typography } from "@/components/typography";
 
+const canonical = (slug: string) => `/docs/${slug}`;
+
 type PageProps = {
   params: { slug: string[] };
 };
@@ -41,6 +43,9 @@ export async function generateMetadata({ params: { slug = [] } }: PageProps) {
   return {
     title: frontmatter.title,
     description: frontmatter.description,
+    alternates: {
+      canonical: canonical(slug.join("/")),
+    },
   };
 }
 
