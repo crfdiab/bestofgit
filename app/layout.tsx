@@ -1,16 +1,17 @@
 import type { Metadata } from "next";
 import { ThemeProvider } from "@/components/contexts/theme-provider";
 import { Navbar } from "@/components/navbar";
-import { GeistSans } from "geist/font/sans";
-import { GeistMono } from "geist/font/mono";
 import { Footer } from "@/components/footer";
 import "./globals.css";
 
 export const metadata: Metadata = {
   title: "AriaDocs - Template",
-  metadataBase: new URL("https://ariadocs.vercel.app/"),
+  metadataBase: new URL("https://bestofgit.vercel.app/"),
   description:
     "This comprehensive documentation template, crafted with Next.js and available as open-source, delivers a sleek and responsive design, tailored to meet all your project documentation requirements.",
+  alternates: {
+    canonical: "/",
+  },
 };
 
 export default function RootLayout({
@@ -21,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${GeistSans.variable} ${GeistMono.variable} font-regular antialiased`}
+        className={`antialiased font-sans`}
         suppressHydrationWarning
       >
         <ThemeProvider
