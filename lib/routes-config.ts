@@ -3,14 +3,14 @@
 export type EachRoute = {
   title: string;
   href: string;
-  noLink?: true | undefined;
+  noLink?: true;
   items?: EachRoute[];
 };
 
 export const ROUTES: EachRoute[] = [
   {
-    title: "Docs",
-    href: "/docs",
+    title: "Repos By Language",
+    href: "/getting-started",
     noLink: undefined,
     items: [
       { title: "Introduction", href: "/introduction" },
@@ -49,7 +49,7 @@ export const ROUTES: EachRoute[] = [
     ],
   },
   {
-    title: "Repos By Frameworks",
+    title: "Repos By Framework",
     href: "/server-actions",
     noLink: undefined,
     items: [
