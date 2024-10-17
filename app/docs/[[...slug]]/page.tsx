@@ -18,8 +18,9 @@ type PageProps = {
 };
 
 export default async function DocsPage({ params: { slug = [] } }: PageProps) {
-  // Handle root docs path
-  const pathName = slug.length === 0 ? '' : slug.join("/");
+  // Remove 'docs' if it's the first segment
+  const cleanSlug = slug[0] === 'docs' ? slug.slice(1) : slug;
+  const pathName = cleanSlug.join("/");
   
   try {
     const res = await getDocsForSlug(pathName);
@@ -52,7 +53,10 @@ export default async function DocsPage({ params: { slug = [] } }: PageProps) {
 }
 
 export async function generateMetadata({ params: { slug = [] } }: PageProps) {
-  const pathName = slug.length === 0 ? '' : slug.join("/");
+  const cleanSlug = slug[0] === 'docs' ? slug.slice(1) : slug;
+  const pathName = cleanSlug.join("/");
+  const res = await getDocsForSlug(pathName);
+  if (!res) return null;
   
   try {
     const res = await getDocsForSlug(pathName);
@@ -74,7 +78,9 @@ export async function generateMetadata({ params: { slug = [] } }: PageProps) {
 
 export function generateStaticParams() {
   return page_routes.map((item) => ({
-    // Handle root docs path in static params
-    slug: item.href === '/docs' ? [] : item.href.split("/").slice(1),
+    // Remove 'docs' from the beginning of the path if present
+    slug: item.href === '/docs' 
+      ? [] 
+      : item.href.replace(/^\/docs\//, '').split("/"),
   }));
 }
