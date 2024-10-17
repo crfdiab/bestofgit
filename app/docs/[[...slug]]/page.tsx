@@ -78,9 +78,8 @@ export async function generateMetadata({ params: { slug = [] } }: PageProps) {
 
 export function generateStaticParams() {
   return page_routes.map((item) => ({
-    // Remove 'docs' from the beginning of the path if present
     slug: item.href === '/docs' 
       ? [] 
-      : item.href.replace(/^\/docs\//, '').split("/"),
+      : item.href.split("/").filter(segment => segment !== "docs" && segment !== ""),
   }));
 }
