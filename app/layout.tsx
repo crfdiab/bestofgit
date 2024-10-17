@@ -3,12 +3,12 @@ import { ThemeProvider } from "@/components/contexts/theme-provider";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import "./globals.css";
-
+const siteName = "Best of Git"
 export const metadata: Metadata = {
-  title: "AriaDocs - Template",
+  title: "Best Repositories On GitHub Directory | " + siteName,
   metadataBase: new URL("https://bestofgit.vercel.app/"),
   description:
-    "This comprehensive documentation template, crafted with Next.js and available as open-source, delivers a sleek and responsive design, tailored to meet all your project documentation requirements.",
+    "Best Of Git Is Directory Listing GitHub Repositories By Language, Frameworks And Purpose. Our Lists Ranked By Must Forked And Reviewed On GitHub.",
   alternates: {
     canonical: "/",
   },

@@ -6,7 +6,12 @@ import { notFound } from "next/navigation";
 import { getDocsForSlug } from "@/lib/markdown";
 import { Typography } from "@/components/typography";
 
-const canonical = (slug: string) => `/docs/${slug}`;
+const canonical = (slug: string) => {
+  if (slug === '') {
+    return '/docs';
+  }
+  return `/docs/${slug}`;
+};
 
 type PageProps = {
   params: { slug: string[] };
@@ -41,10 +46,10 @@ export async function generateMetadata({ params: { slug = [] } }: PageProps) {
   if (!res) return null;
   const { frontmatter } = res;
   return {
-    title: frontmatter.title,
+    title: frontmatter.title + " | Best of Git",
     description: frontmatter.description,
     alternates: {
-      canonical: canonical(slug.join("/")),
+      canonical: canonical(pathName),
     },
   };
 }
