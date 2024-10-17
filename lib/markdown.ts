@@ -63,15 +63,15 @@ type BaseMdxFrontmatter = {
 export async function getDocsForSlug(slug: string) {
   try {
     const contentPath = getDocsContentPath(slug);
-    console.log("Attempting to read file:", contentPath); // Add this line
+    console.log('Reading file from:', contentPath); // Debug log
     const rawMdx = await fs.readFile(contentPath, "utf-8");
     return await parseMdx<BaseMdxFrontmatter>(rawMdx);
   } catch (err) {
-    console.error("Error reading docs file:", err); // Improve error logging
-    throw err; // Rethrow the error to be handled by the caller
+    console.error(`Error reading docs file:`, err);
+    console.error(`Attempted path:`, getDocsContentPath(slug));
+    return null;
   }
 }
-
 export async function getDocsTocs(slug: string) {
   const contentPath = getDocsContentPath(slug);
   const rawMdx = await fs.readFile(contentPath, "utf-8");
@@ -106,8 +106,12 @@ function sluggify(text: string) {
 }
 
 function getDocsContentPath(slug: string) {
-  const basePath = process.env.VERCEL ? '/vercel/path0' : process.cwd();
-  return path.join(basePath, "contents", "docs", slug, "index.mdx");
+  // Handle root docs path
+  if (slug === '') {
+    return path.join(process.cwd(), 'contents', 'docs', 'index.mdx');
+  }
+  // Handle nested paths
+  return path.join(process.cwd(), 'contents', 'docs', slug, 'index.mdx');
 }
 
 // for copying the code
