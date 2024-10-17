@@ -9,9 +9,9 @@ export type EachRoute = {
 
 export const ROUTES: EachRoute[] = [
   {
-    title: "Getting Started",
+    title: "Repos By Languages",
     href: "/getting-started",
-    noLink: true,
+    noLink: undefined,
     items: [
       { title: "Introduction", href: "/introduction" },
       {
@@ -49,9 +49,9 @@ export const ROUTES: EachRoute[] = [
     ],
   },
   {
-    title: "Server Actions",
+    title: "Repos By Frameworks",
     href: "/server-actions",
-    noLink: true,
+    noLink: undefined,
     items: [
       { title: "getSession", href: "/getSession" },
       { title: "getToken", href: "/getToken" },
@@ -59,9 +59,9 @@ export const ROUTES: EachRoute[] = [
     ],
   },
   {
-    title: "React Hooks",
+    title: "Repos By Purpose",
     href: "/react-hooks",
-    noLink: true,
+    noLink: undefined,
     items: [
       { title: "useSession", href: "/use-session" },
       { title: "useFetch", href: "/use-fetch" },
