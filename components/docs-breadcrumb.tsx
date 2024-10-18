@@ -6,6 +6,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
+import Link from "next/link";
 import { Fragment } from "react";
 
 export default function DocsBreadcrumb({ paths }: { paths: string[] }) {
@@ -14,16 +15,18 @@ export default function DocsBreadcrumb({ paths }: { paths: string[] }) {
       <Breadcrumb>
         <BreadcrumbList>
           <BreadcrumbItem>
-            <BreadcrumbLink href="/docs">Docs</BreadcrumbLink>
+            <Link href="/docs" passHref legacyBehavior>
+              <BreadcrumbLink>Docs</BreadcrumbLink>
+            </Link>
           </BreadcrumbItem>
           {paths.map((path, index) => (
             <Fragment key={path}>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
                 {index < paths.length - 1 ? (
-                  <BreadcrumbLink className="a" href={`/docs/${path}`}>
-                    {toTitleCase(path)}
-                  </BreadcrumbLink>
+                  <Link href={`/docs/${paths.slice(0, index + 1).join("/")}`} passHref legacyBehavior>
+                    <BreadcrumbLink>{toTitleCase(path)}</BreadcrumbLink>
+                  </Link>
                 ) : (
                   <BreadcrumbPage className="b">
                     {toTitleCase(path)}
