@@ -108,10 +108,10 @@ function sluggify(text: string) {
 function getDocsContentPath(slug: string) {
   // Handle root docs path
   if (slug === '') {
-    return path.join(process.cwd(), 'contents', 'docs', 'index.mdx');
+    return path.join(process.cwd(), 'contents', 'repositories', 'index.mdx');
   }
   // Handle nested paths
-  return path.join(process.cwd(), 'contents', 'docs', slug, 'index.mdx');
+  return path.join(process.cwd(), 'contents', 'repositories', slug, 'index.mdx');
 }
 
 // for copying the code

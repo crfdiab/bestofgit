@@ -15,8 +15,8 @@ export default function DocsBreadcrumb({ paths }: { paths: string[] }) {
       <Breadcrumb>
         <BreadcrumbList>
           <BreadcrumbItem>
-            <Link href="/docs" passHref legacyBehavior>
-              <BreadcrumbLink>Docs</BreadcrumbLink>
+            <Link href="/repositories" passHref legacyBehavior>
+              <BreadcrumbLink>Repositories</BreadcrumbLink>
             </Link>
           </BreadcrumbItem>
           {paths.map((path, index) => (
@@ -24,7 +24,7 @@ export default function DocsBreadcrumb({ paths }: { paths: string[] }) {
               <BreadcrumbSeparator />
               <BreadcrumbItem>
                 {index < paths.length - 1 ? (
-                  <Link href={`/docs/${paths.slice(0, index + 1).join("/")}`} passHref legacyBehavior>
+                  <Link href={`/repositories/${paths.slice(0, index + 1).join("/")}`} passHref legacyBehavior>
                     <BreadcrumbLink>{toTitleCase(path)}</BreadcrumbLink>
                   </Link>
                 ) : (
