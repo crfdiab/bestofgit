@@ -8,9 +8,9 @@ import { Typography } from "@/components/typography";
 
 const canonical = (slug: string) => {
   if (slug === '') {
-    return '/docs';
+    return '/repositories';
   }
-  return `/docs/${slug}`;
+  return `/repositories/${slug}`;
 };
 
 type PageProps = {
@@ -19,7 +19,7 @@ type PageProps = {
 
 export default async function DocsPage({ params: { slug = [] } }: PageProps) {
   // Remove 'docs' if it's the first segment
-  const cleanSlug = slug[0] === 'docs' ? slug.slice(1) : slug;
+  const cleanSlug = slug[0] === 'repositories' ? slug.slice(1) : slug;
   const pathName = cleanSlug.join("/");
   
   try {
@@ -53,7 +53,7 @@ export default async function DocsPage({ params: { slug = [] } }: PageProps) {
 }
 
 export async function generateMetadata({ params: { slug = [] } }: PageProps) {
-  const cleanSlug = slug[0] === 'docs' ? slug.slice(1) : slug;
+  const cleanSlug = slug[0] === 'repositories' ? slug.slice(1) : slug;
   const pathName = cleanSlug.join("/");
   const res = await getDocsForSlug(pathName);
   if (!res) return null;
@@ -78,8 +78,8 @@ export async function generateMetadata({ params: { slug = [] } }: PageProps) {
 
 export function generateStaticParams() {
   return page_routes.map((item) => ({
-    slug: item.href === '/docs' 
+    slug: item.href === '/repositories' 
       ? [] 
-      : item.href.split("/").filter(segment => segment !== "docs" && segment !== ""),
+      : item.href.split("/").filter(segment => segment !== "repositories" && segment !== ""),
   }));
 }

@@ -6,7 +6,7 @@ const BASE_URL = 'https://bestofgit.vercel.app'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const routes = page_routes.map((route) => ({
-    url: `${BASE_URL}/docs${route.href}`,
+    url: `${BASE_URL}/repositories${route.href}`,
     lastModified: new Date(),
   }))
 
