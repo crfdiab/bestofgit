@@ -22,7 +22,7 @@ export default function Home() {
       </p>
       <div className="flex flex-row items-center gap-5">
         <Link
-          href="/docs"
+          href="/repositories"
           className={buttonVariants({ className: "px-6", size: "lg" })}
         >
           Explore Repositories
