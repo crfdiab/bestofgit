@@ -17,6 +17,7 @@ import { Stepper, StepperItem } from "@/components/markdown/stepper";
 import Image from "@/components/markdown/image";
 import Link from "@/components/markdown/link";
 import InteractiveCard from "@/components/markdown/interactive-card";
+import FAQToggle from "@/components/markdown/faq-toggle";
 
 // add custom components
 const components = {
@@ -31,6 +32,7 @@ const components = {
   img: Image,
   a: Link,
   InteractiveCard,
+  FAQToggle,
 };
 
 // can be used for other pages like blogs, Guides etc
@@ -178,3 +180,4 @@ export async function getBlogForSlug(slug: string) {
   const blogs = await getAllBlogs();
   return blogs.find((it) => it.slug == slug);
 }
+
