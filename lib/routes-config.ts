@@ -13,6 +13,7 @@ export const ROUTES: EachRoute[] = [
     noLink: undefined,
     items: [
       { title: "Go", href: "/go" },
+      { title: "Python", href: "/python" },
       { title: "Swift", href: "/swift" },
       { title: "TypeScript", href: "/typescript" },
       { title: "Rust", href: "/rust" },
