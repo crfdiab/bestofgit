@@ -18,6 +18,7 @@ import Image from "@/components/markdown/image";
 import Link from "@/components/markdown/link";
 import InteractiveCard from "@/components/markdown/interactive-card";
 import FAQToggle from "@/components/markdown/faq-toggle";
+import Badge from "@/components/markdown/badge";
 
 // add custom components
 const components = {
@@ -33,6 +34,7 @@ const components = {
   a: Link,
   InteractiveCard,
   FAQToggle,
+  Badge,
 };
 
 // can be used for other pages like blogs, Guides etc
@@ -180,4 +182,3 @@ export async function getBlogForSlug(slug: string) {
   const blogs = await getAllBlogs();
   return blogs.find((it) => it.slug == slug);
 }
-
