@@ -15,7 +15,7 @@ export const ROUTES: EachRoute[] = [
       { title: "Go", href: "/go" },
       { title: "Python", href: "/python" },
       { title: "Swift", href: "/swift" },
-      { title: "TypeScript", href: "/typescript" },
+      { title: "TypeScript", href: "/typescript" }, 
       { title: "Rust", href: "/rust" },
       { title: "Kotlin", href: "/kotlin" },
       { title: "CPython", href: "/cpython" },
