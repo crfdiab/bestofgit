@@ -15,7 +15,7 @@ export default function Home() {
         <MoveUpRightIcon className="w-4 h-4 font-extrabold" />
       </Link>
       <h1 className="text-3xl font-bold mb-4 sm:text-7xl">
-      Best Repositories On GitHub Directory
+      Best GitHub Repositories Directory
       </h1>
       <p className="mb-8 sm:text-xl max-w-[800px] text-muted-foreground">
       Best Of Git Is Directory Listing GitHub Repositories By Language, Frameworks And Purpose. Our Lists Ranked By Must Forked And Reviewed On GitHub.
