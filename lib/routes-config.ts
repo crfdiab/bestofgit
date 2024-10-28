@@ -115,7 +115,6 @@ export const ROUTES: EachRoute[] = [
         title: "Desktop and Crossplatform",
         href: "/desktop-and-crossplatform",
         items: [
-          { title: "Electron", href: "/electron" },
           { title: "Tauri", href: "/tauri" },
           { title: "Qt", href: "/qt" },
           { title: "Blazor", href: "/blazor" },
