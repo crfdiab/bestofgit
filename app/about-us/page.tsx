@@ -27,7 +27,7 @@ export default function AboutUsPage() {
           <p className="text-muted-foreground leading-relaxed">
             Best Of Git was created with a simple goal: to make Git version control accessible and 
             understandable for developers of all skill levels. We believe that proper version control 
-            is fundamental to successful software development, and we're here to help you master it.
+            is fundamental to successful software development, and we&apos;re here to help you master it.
           </p>
         </div>
 
@@ -62,7 +62,7 @@ export default function AboutUsPage() {
             <h2 className="text-xl font-bold">Get in Touch</h2>
           </div>
           <p className="text-muted-foreground leading-relaxed">
-            Have questions or suggestions? We'd love to hear from you! Reach out to us at{' '}
+            Have questions or suggestions? We&apos;d love to hear from you! Reach out to us at{' '}
             <a href="mailto:contact@bestofgit.com" className="text-primary hover:underline">
               contact@bestofgit.com
             </a>
