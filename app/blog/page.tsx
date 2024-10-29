@@ -7,6 +7,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Blog | Best Of Git",
+  description: "All Related Information About Git, Latest News, Tutorials, and More.",
   alternates: {
     canonical: "/blog",
   },
