@@ -5,7 +5,7 @@ import { Footer } from "@/components/footer";
 import "./globals.css";
 const siteName = "Best of Git"
 export const metadata: Metadata = {
-  title: "Best Repositories On GitHub Directory | " + siteName,
+  title: "Curating The Best GitHub Repositories | " + siteName,
   metadataBase: new URL("https://bestofgit.vercel.app/"),
   description:
     "Best Of Git Is Directory Listing GitHub Repositories By Language, Frameworks And Purpose. Our Lists Ranked By Must Forked And Reviewed On GitHub.",

@@ -175,16 +175,6 @@ export const ROUTES: EachRoute[] = [
         ],
       },
       {
-        title: "Data Tools",
-        href: "/data-tools",
-        items: [
-          { title: "Database Tools", href: "/database-tools" },
-          { title: "Data Visualization", href: "/data-visualization" },
-          { title: "Data Processing", href: "/data-processing" },
-          { title: "Analytics", href: "/analytics" },
-        ],
-      },
-      {
         title: "Testing",
         href: "/testing",
         items: [
@@ -192,15 +182,6 @@ export const ROUTES: EachRoute[] = [
           { title: "E2E Testing", href: "/e2e-testing" },
           { title: "Performance Testing", href: "/performance-testing" },
           { title: "Mocking", href: "/mocking" },
-        ],
-      },
-      {
-        title: "Content Management",
-        href: "/content-management",
-        items: [
-          { title: "Headless CMS", href: "/headless-cms" },
-          { title: "Media Management", href: "/media-management" },
-          { title: "Documentation", href: "/documentation" },
         ],
       },
       {
@@ -230,16 +211,6 @@ export const ROUTES: EachRoute[] = [
           { title: "Smart Contracts", href: "/smart-contracts" },
           { title: "Wallet Integration", href: "/wallet-integration" },
           { title: "Blockchain Testing", href: "/blockchain-testing" },
-        ],
-      },
-      {
-        title: "UI Resources",
-        href: "/ui-resources",
-        items: [
-          { title: "Design Systems", href: "/design-systems" },
-          { title: "Icon Libraries", href: "/icon-libraries" },
-          { title: "Animation Libraries", href: "/animation-libraries" },
-          { title: "Color Tools", href: "/color-tools" },
         ],
       },
     ],
