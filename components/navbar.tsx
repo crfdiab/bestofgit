@@ -30,28 +30,41 @@ export const NAVLINKS = [
 export function Navbar() {
   return (
     <nav className="w-full border-b h-16 sticky top-0 z-50 bg-background">
-      <div className="sm:container mx-auto w-[95vw] h-full flex items-center justify-between md:gap-2">
-        <div className="flex items-center gap-5">
+      <div className="sm:container mx-auto w-[95vw] h-full flex items-center justify-between">
+        <div className="flex items-center gap-4">
           <SheetLeftbar />
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-4">
             <div className="sm:flex hidden">
               <Logo />
+            </div>
+            <div className="hidden md:flex items-center gap-4">
+              {NAVLINKS.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={buttonVariants({ 
+                    variant: "ghost", 
+                    size: "sm",
+                    className: "px-3"
+                  })}
+                >
+                  {item.title}
+                </Link>
+              ))}
             </div>
           </div>
         </div>
 
-        <div className="flex items-center gap-3">
-          <div className="flex items-center gap-2">
-            <Search />
-            <div className="flex ml-2.5 sm:ml-0">
-              <Link
-                href="https://github.com/crfdiab/bestofgit"
-                className={buttonVariants({ variant: "ghost", size: "icon" })}
-              >
-                <GithubIcon className="h-[1.1rem] w-[1.1rem]" />
-              </Link>
-              <ModeToggle />
-            </div>
+        <div className="flex items-center gap-2">
+          <Search />
+          <div className="flex items-center gap-1">
+            <Link
+              href="https://github.com/crfdiab/bestofgit"
+              className={buttonVariants({ variant: "ghost", size: "icon" })}
+            >
+              <GithubIcon className="h-[1.1rem] w-[1.1rem]" />
+            </Link>
+            <ModeToggle />
           </div>
         </div>
       </div>
