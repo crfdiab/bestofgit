@@ -45,6 +45,8 @@ export const ROUTES: EachRoute[] = [
       { title: "Beef", href: "/beef" },
       { title: "Gleam", href: "/gleam" },
       { title: "Cython", href: "/cython" },
+      { title: "JavaScript", href: "/javascript" },
+      { title: "Java", href: "/java" },
     ],
   },
   {
