@@ -14,7 +14,7 @@ export default function AboutUsPage() {
       <div className="mb-7 flex flex-col gap-2">
         <h1 className="text-3xl font-extrabold">About Us</h1>
         <p className="text-muted-foreground">
-          Best Of Git is a GitHub repositories directory filtered and organized by programming languages, frameworks, and general purpose use cases. We are periodically updating our directory with more languages, frameworks, and use cases, based on our valued users' demand.
+          Best Of Git is a GitHub repositories directory filtered and organized by programming languages, frameworks, and general purpose use cases. We are periodically updating our directory with more languages, frameworks, and use cases, based on our valued users&apos; demand.
         </p>
       </div>
 

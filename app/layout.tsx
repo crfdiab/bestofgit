@@ -3,6 +3,7 @@ import { ThemeProvider } from "@/components/contexts/theme-provider";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import "./globals.css";
+import { GoogleTagManager } from '@next/third-parties/google'
 const siteName = "Best of Git"
 export const metadata: Metadata = {
   title: "Curating The Best GitHub Repositories | " + siteName,
@@ -21,6 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <GoogleTagManager gtmId="GTM-PXQC2Z4T" />
       <body
         className={`antialiased font-sans`}
         suppressHydrationWarning
