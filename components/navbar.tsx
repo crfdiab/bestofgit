@@ -1,5 +1,5 @@
 import { ModeToggle } from "@/components/theme-toggle";
-import { GithubIcon, TwitterIcon, CommandIcon } from "lucide-react";
+import { GithubIcon, CommandIcon } from "lucide-react";
 import Link from "next/link";
 import { buttonVariants } from "./ui/button";
 import Search from "./search";
@@ -37,9 +37,6 @@ export function Navbar() {
             <div className="sm:flex hidden">
               <Logo />
             </div>
-            <div className="lg:flex hidden items-center gap-4 text-sm font-medium text-muted-foreground">
-              <NavMenu />
-            </div>
           </div>
         </div>
 
@@ -52,15 +49,6 @@ export function Navbar() {
                 className={buttonVariants({ variant: "ghost", size: "icon" })}
               >
                 <GithubIcon className="h-[1.1rem] w-[1.1rem]" />
-              </Link>
-              <Link
-                href="#"
-                className={buttonVariants({
-                  variant: "ghost",
-                  size: "icon",
-                })}
-              >
-                <TwitterIcon className="h-[1.1rem] w-[1.1rem]" />
               </Link>
               <ModeToggle />
             </div>

@@ -6,7 +6,7 @@ import "./globals.css";
 const siteName = "Best of Git"
 export const metadata: Metadata = {
   title: "Curating The Best GitHub Repositories | " + siteName,
-  metadataBase: new URL("https://bestofgit.vercel.app/"),
+  metadataBase: new URL("https://bestofgit.codes/"),
   description:
     "Best Of Git Is Directory Listing GitHub Repositories By Language, Frameworks And Purpose. Our Lists Ranked By Must Forked And Reviewed On GitHub.",
   alternates: {
