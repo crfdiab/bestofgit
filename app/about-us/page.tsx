@@ -14,7 +14,7 @@ export default function AboutUsPage() {
       <div className="mb-7 flex flex-col gap-2">
         <h1 className="text-3xl font-extrabold">About Us</h1>
         <p className="text-muted-foreground">
-          Discover the story behind Best Of Git and our mission to make Git accessible to everyone
+          Best Of Git is a GitHub repositories directory filtered and organized by programming languages, frameworks, and general purpose use cases. We are periodically updating our directory with more languages, frameworks, and use cases, based on our valued users' demand.
         </p>
       </div>
 
@@ -25,9 +25,9 @@ export default function AboutUsPage() {
             <h2 className="text-xl font-bold">Our Mission</h2>
           </div>
           <p className="text-muted-foreground leading-relaxed">
-            Best Of Git was created with a simple goal: to make Git version control accessible and 
-            understandable for developers of all skill levels. We believe that proper version control 
-            is fundamental to successful software development, and we&apos;re here to help you master it.
+            Our mission is to provide developers with a centralized hub for discovering the best GitHub repositories. 
+            We aim to simplify the search for high-quality projects by ranking and listing them by stars and forks, 
+            making it easy for developers to find trusted and popular resources for their projects, learning, or inspiration.
           </p>
         </div>
 
@@ -36,12 +36,12 @@ export default function AboutUsPage() {
           <div className="flex items-center gap-2 mb-4">
             <h2 className="text-xl font-bold">What We Offer</h2>
           </div>
-          <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-            <li>Comprehensive Git tutorials for beginners to advanced users</li>
-            <li>Curated collection of Git commands and best practices</li>
-            <li>Regular updates with new content and improvements</li>
-            <li>Community-driven learning environment</li>
-          </ul>
+          <p className="text-muted-foreground leading-relaxed">
+            We offer a curated selection of the top GitHub repositories across various programming languages 
+            and frameworks, saving you time by organizing these resources in one place. In addition to our 
+            core repository listings, we also publish insightful blog posts about GitHub, open-source 
+            contributions, and popular repositories. Stay tuned as we expand with more sections based on user demand!
+          </p>
         </div>
 
         {/* Our Team */}
@@ -50,9 +50,9 @@ export default function AboutUsPage() {
             <h2 className="text-xl font-bold">Our Team</h2>
           </div>
           <p className="text-muted-foreground leading-relaxed">
-            We are a passionate team of developers and educators who understand the challenges of 
-            learning Git. Our diverse backgrounds in software development enable us to create 
-            content that resonates with developers at every stage of their journey.
+            Currently, Best Of Git is powered solely by Mohamed Diab. As the project grows, we are excited 
+            about the potential to invite other developers and open-source enthusiasts to contribute, 
+            bringing even more depth and diversity to our offerings.
           </p>
         </div>
 

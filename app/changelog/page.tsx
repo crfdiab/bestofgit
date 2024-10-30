@@ -19,17 +19,31 @@ export default function ChangelogPage() {
       </div>
 
       <div className="space-y-8">
+        {/* Version 1.3.0 */}
+        <div className="border-b pb-8">
+          <div className="flex items-center gap-2 mb-4">
+            <h2 className="text-xl font-bold">Version 1.3.0</h2>
+            <span className="text-sm text-muted-foreground">October 29, 2024</span>
+          </div>
+          <ul className="list-disc list-inside space-y-2">
+            <li>Completed all content for framework and purpose sections</li>
+            <li>Enhanced user interface for better usability and performance</li>
+            <li>Improved mobile responsiveness across all pages</li>
+            <li>Fixed build error impacting deployment stability</li>
+          </ul>
+        </div>
+
         {/* Version 1.2.0 */}
         <div className="border-b pb-8">
           <div className="flex items-center gap-2 mb-4">
             <h2 className="text-xl font-bold">Version 1.2.0</h2>
-            <span className="text-sm text-muted-foreground">March 20, 2024</span>
+            <span className="text-sm text-muted-foreground">October 26, 2024</span>
           </div>
           <ul className="list-disc list-inside space-y-2">
-            <li>Added comprehensive Git tutorials section</li>
-            <li>Improved search functionality with better results</li>
-            <li>Enhanced mobile responsiveness across all pages</li>
-            <li>Fixed various UI bugs and improved performance</li>
+            <li>Added comprehensive section for web development frameworks</li>
+            <li>Removed inactive languages to streamline available content</li>
+            <li>Improved CSS styling for Shields.io badges</li>
+            <li>Enhanced homepage with interactive cards for a more engaging user experience</li>
           </ul>
         </div>
 
@@ -37,13 +51,12 @@ export default function ChangelogPage() {
         <div className="border-b pb-8">
           <div className="flex items-center gap-2 mb-4">
             <h2 className="text-xl font-bold">Version 1.1.0</h2>
-            <span className="text-sm text-muted-foreground">March 10, 2024</span>
+            <span className="text-sm text-muted-foreground">October 23, 2024</span>
           </div>
           <ul className="list-disc list-inside space-y-2">
-            <li>Introduced new blog section</li>
-            <li>Added dark mode support</li>
-            <li>Implemented user authentication</li>
-            <li>Added comment system for blog posts</li>
+            <li>Configured all routes per SEO best practices</li>
+            <li>Updated fonts and routes for improved readability and accessibility</li>
+            <li>Added and fixed various UI elements on the homepage</li>
           </ul>
         </div>
 
@@ -51,13 +64,11 @@ export default function ChangelogPage() {
         <div className="border-b pb-8">
           <div className="flex items-center gap-2 mb-4">
             <h2 className="text-xl font-bold">Version 1.0.0</h2>
-            <span className="text-sm text-muted-foreground">March 1, 2024</span>
+            <span className="text-sm text-muted-foreground">October 21, 2024</span>
           </div>
           <ul className="list-disc list-inside space-y-2">
-            <li>Initial release of Best Of Git</li>
-            <li>Basic Git command documentation</li>
-            <li>Responsive design implementation</li>
-            <li>Search functionality</li>
+            <li>Initial deployment of Best Of Git with basic directory features</li>
+            <li>Set up primary categories by language and framework</li>
           </ul>
         </div>
       </div>

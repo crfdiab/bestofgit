@@ -1,0 +1,253 @@
+---
+title: "Git Commands Cheat Sheet: Every Developer Should Know"
+description: "Understanding Git commands is essential for effective version control. This comprehensive cheatsheet covers everything from basic daily operations to advanced Git commands"
+date: 07-10-2024
+authors:
+  - avatar: "https://ui.shadcn.com/avatars/02.png"
+    handle: crfdiab
+    username: Crfdiab
+    handleUrl: "https://github.com/crfdiab"
+cover: "/git-commands-cheat-sheet.webp"
+---
+
+Understanding Git commands is essential for effective version control. This comprehensive cheatsheet covers everything from basic daily operations to advanced Git commands, helping developers navigate through common scenarios and complex situations with confidence and efficiency.
+
+## Table of Contents
+
+- [Getting Started With Git Commands](#getting-started-with-git-commands)
+- [Basic Daily Git Commands](#basic-daily-git-commands)
+- [Branching and Merging Commands](#branching-and-merging-commands)
+- [Advanced Git Operations](#advanced-git-operations)
+- [Troubleshooting and Recovery Commands](#troubleshooting-and-recovery-commands)
+- [Command Reference Tables](#command-reference-tables)
+
+
+## Getting Started With Git Commands
+
+To effectively use Git, you'll need to familiarize yourself with the command line interface. First, ensure that Git is installed on your system. You can download it from the official Git website.
+
+Once installed, perform basic configuration using the git config command to set your username and email, which are important for commit history. For example:
+
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "your.email@example.com"
+```
+
+Next, initialize a new repository with `git init` or clone an existing one using `git clone [repository-url]`.
+
+Related Reading : [What Is A Git Repository](/blog/what-is-git-repository)
+
+Understanding command syntax is crucial. Most Git commands follow a simple structure: git [command] [options] [arguments].
+
+To get help with any command, you can use the git help command or append --help to any command (e.g., git commit --help). This will guide you through available options and usage.
+
+To get help with any command, you can use the git help command or append --help to any command (e.g., git commit --help). This will guide you through available options and usage.
+
+## Basic Daily Git Commands
+
+Daily operations in Git revolve around a few key commands that every developer should know.
+
+git add: Stage changes in your working directory for the next commit.
+```bash
+git add [file]
+```
+
+git commit: Save the staged changes to your local repository with a message.
+```bash
+git commit -m "Your commit message"
+```
+
+git push: Upload your local changes to a remote repository.
+```bash
+git push origin main
+```
+
+git pull: Fetch and merge changes from the remote repository to your local branch.
+```bash
+git pull origin main
+```
+
+git status: Check the status of your working directory and staging area.
+```bash
+git status
+```
+
+git log: View the commit history for the current branch.
+```bash
+git log
+```
+
+git diff: Show changes between commits, branches, or the working directory.
+```bash
+git diff
+```
+
+git branch: List all branches in your repository.
+```bash
+git branch
+```
+
+git checkout: Switch to a different branch or restore working tree files.
+```bash
+git checkout [branch-name]
+```
+
+These commands are essential for managing your workflow and keeping your projects organized.
+
+## Branching and Merging Commands
+
+Branching is a powerful feature in Git that allows you to work on different tasks simultaneously. Here are some essential commands:
+
+Branch Creation: Use git branch [branch-name] to create a new branch.
+```bash
+git branch feature-branch
+```
+
+Branch Switching: Switch between branches using git checkout [branch-name].
+```bash
+git checkout feature-branch
+```
+
+Merge Operations: Merge changes from one branch into another with git merge [branch-name].
+```bash
+git merge feature-branch
+```
+
+Rebase Commands: Use git rebase [branch-name] to apply changes from one branch to another in a linear fashion.
+```bash
+git rebase main
+```
+
+Cherry-Picking: Apply a commit from one branch to another using git cherry-pick [commit-hash].
+```bash
+git cherry-pick a1b2c3d
+```
+
+Branch Deletion: Remove a branch that is no longer needed with git branch -d [branch-name].
+```bash
+git branch -d feature-branch
+```
+
+Branch Renaming: Rename the current branch with git branch -m [new-name].
+```bash
+git branch -m new-feature-branch
+```
+
+## Advanced Git Operations
+
+For more complex tasks, Git offers advanced commands that enhance your workflow:
+
+git reset: Reset your current HEAD to a specified state.
+```bash
+git reset --hard [commit]
+```
+
+git revert: Create a new commit that undoes changes made by a previous commit.
+```bash
+git revert [commit]
+```
+
+git stash: Temporarily store changes that are not ready to be committed.
+```bash
+git stash
+```
+
+git reflog: View the reference logs to find lost commits.
+```bash
+git reflog
+```
+
+git bisect: Use binary search to find the commit that introduced a bug.
+```bash
+git bisect
+```
+
+## Troubleshooting and Recovery Commands
+
+Even experienced developers face issues with Git. Here are commands that aid in troubleshooting:
+
+1.  **Error Recovery**: Recover from errors by resetting or reverting changes.
+    
+2.  **Lost Commits**: Use git reflog to find and recover lost commits.
+```bash
+git reflog
+```
+
+3.  **Broken Branches**: Fix broken branches by resetting or checking out previous commits.
+    
+4.  **Conflict Resolution**: Resolve merge conflicts using Git’s built-in tools.
+    
+5.  **Data Recovery**: Retrieve lost data with commands like git stash pop.
+```bash
+git stash pop
+```
+
+6.  **History Repair**: Clean up your commit history with rebase and reset.
+    
+7.  **Repository Cleanup**: Remove unnecessary files using git gc for garbage collection.
+```bash
+git gc
+```
+
+8.  **Reference Restoration**: Restore deleted branches and commits from reflog.
+```bash
+git reflog
+```
+
+9.  **Debug Commands**: Use git fsck to check the integrity of your repository.
+```bash
+git fsck
+```
+
+These commands are vital for maintaining the health of your Git projects.
+
+## Command Reference Tables
+
+To quickly reference Git commands, here are some categorized tables:
+
+### Command Categories
+| Command Category | Description |
+|-----------------|-------------|
+| Basic Commands | git add, git commit, git push |
+| Branch Commands | git branch, git checkout, git merge |
+| Advanced Commands | git reset, git revert, git stash |
+
+### Common Flags
+| Flag | Description |
+|------|-------------|
+| -m | Commit message |
+| --hard | Reset changes completely |
+| --force | Force push changes |
+
+### Use Cases
+| Command | Use Case |
+|---------|----------|
+| git status | Check current state |
+| git log | View commit history |
+
+### Syntax Patterns
+| Command | Syntax |
+|---------|--------|
+| git [command] | General command format |
+
+### Parameter Descriptions
+| Parameter | Description |
+|-----------|-------------|
+| [branch-name] | Name of the branch to switch to |
+
+### Output Formats
+| Command | Output |
+|---------|---------|
+| git log | Commit history |
+
+### Error Messages
+| Error Message | Meaning |
+|--------------|---------|
+| "fatal: Not a git repository" | Indicates you're not in a Git repo |
+
+### Command Relationships
+| Command | Related Commands |
+|---------|-----------------|
+| git branch | git checkout, git merge |
+
+These tables serve as a quick reference for commonly used Git commands, ensuring you have the information you need at your fingertips.

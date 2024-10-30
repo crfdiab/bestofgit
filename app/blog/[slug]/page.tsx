@@ -8,6 +8,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { formatDate } from "@/lib/utils";
 import Image from "next/image";
 
+
 const canonical = (slug: string) => `/blog/${slug}`;
 
 type PageProps = {
@@ -63,7 +64,7 @@ export default async function BlogPage({ params: { slug } }: PageProps) {
         <div className="w-full mb-7">
           <Image
             src={res.frontmatter.cover}
-            alt="cover"
+            alt={res.frontmatter.title}
             width={700}
             height={400}
             className="w-full h-[400px] rounded-md border object-cover"
