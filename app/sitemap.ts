@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next'
 import { page_routes } from '@/lib/routes-config'
 import { getAllBlogStaticPaths } from '@/lib/markdown'
 
-const BASE_URL = 'https://bestofgit.vercel.app'
+const BASE_URL = 'https://bestofgit.codes'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const routes = page_routes.map((route) => ({
