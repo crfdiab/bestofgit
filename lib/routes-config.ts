@@ -47,6 +47,8 @@ export const ROUTES: EachRoute[] = [
       { title: "Cython", href: "/cython" },
       { title: "JavaScript", href: "/javascript" },
       { title: "Java", href: "/java" },
+      { title: "C++", href: "/cpp" },
+      { title: "C", href: "/c" },
     ],
   },
   {
