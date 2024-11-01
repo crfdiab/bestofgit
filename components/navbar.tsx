@@ -61,6 +61,8 @@ export function Navbar() {
             <Link
               href="https://github.com/crfdiab/bestofgit"
               className={buttonVariants({ variant: "ghost", size: "icon" })}
+              aria-label="Github"
+              aria-roledescription="Link to Github repository"
             >
               <GithubIcon className="h-[1.1rem] w-[1.1rem]" />
             </Link>
