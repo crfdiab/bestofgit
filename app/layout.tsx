@@ -3,7 +3,7 @@ import { ThemeProvider } from "@/components/contexts/theme-provider";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import "./globals.css";
-import { GoogleTagManager } from '@next/third-parties/google'
+import { GoogleTagManager} from '@next/third-parties/google'
 import { WebSite, WithContext, Person, WebPage, ItemList, SearchAction } from 'schema-dts';
 
 const siteName = "Best of Git"
@@ -82,6 +82,11 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(websiteSchema)
           }}
+        />
+        <script 
+          async 
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2726475267654049"
+          crossOrigin="anonymous"
         />
       </head>
       <GoogleTagManager gtmId="GTM-PXQC2Z4T" />
