@@ -11,6 +11,7 @@ import { visit } from "unist-util-visit";
 
 // custom components imports
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 import Pre from "@/components/markdown/pre";
 import Note from "@/components/markdown/note";
 import { Stepper, StepperItem } from "@/components/markdown/stepper";
@@ -35,6 +36,10 @@ const components = {
   InteractiveCard,
   FAQToggle,
   Badge,
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
 };
 
 // can be used for other pages like blogs, Guides etc
